@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from typing import Union, List
 import tempfile
 import numpy as np
-from Model import TranslationHandler
+from Models.Seamless import TranslationHandler
 
 app = FastAPI()
 
@@ -17,12 +17,10 @@ class TextToTextRequest(BaseModel):
     tgt_lang: str
     src_lang: str
 
-
 class TextToSpeechRequest(BaseModel):
     text: Union[str, List[str]]
     tgt_lang: str
     src_lang: str
-
 
 @app.post("/text-to-text")
 async def text_to_text(request: TextToTextRequest):

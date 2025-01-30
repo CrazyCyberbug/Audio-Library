@@ -318,9 +318,6 @@ class TranslationHandler():
                 self.vits_mya.delete_model()
                 self.vits_mya = None 
         
-        
-
-
 if __name__ == "__main__":
     
     # T
